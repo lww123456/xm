@@ -1,0 +1,337 @@
+body, ul, li, dl, dt, dd {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+.clearfix:after {
+  display: block;
+  content: ".";
+  height: 0;
+  visibility: hidden;
+  clear: both;
+  font-size: 0;
+  line-height: 0; }
+
+.header {
+  padding: 16px;
+  background: #FFF;
+  border: 1px solid #e1e1e1; }
+  .header .wrap {
+    width: 1200px; }
+    .header .wrap .logo {
+      display: block;
+      float: left;
+      width: 54px;
+      height: 48px; }
+      .header .wrap .logo img {
+        border: 0 none;
+        vertical-align: top; }
+    .header .wrap .header-r {
+      float: right;
+      line-height: 18px;
+      font-family: "SimSun";
+      color: #999;
+      width: 300px; }
+      .header .wrap .header-r .help-wrap {
+        background: #FFF; }
+        .header .wrap .header-r .help-wrap .a1 {
+          padding-right: 18px;
+          background: url(../img/dl3.png) no-repeat right -30px;
+          color: #333;
+          font-size: 12px;
+          float: right; }
+          .header .wrap .header-r .help-wrap .a1 .help-t {
+            width: 16px;
+            height: 18px;
+            display: inline-block;
+            margin-right: 6px;
+            background: url(../img/dl3.png) no-repeat -344px 0;
+            vertical-align: middle; }
+      .header .wrap .header-r span {
+        float: left;
+        font-size: 12px; }
+        .header .wrap .header-r span .a2 {
+          color: #06c;
+          font-size: 12px; }
+
+.zc-wrap {
+  position: relative;
+  border-bottom: 1px solid #f4f4f4;
+  background: #fcfcfc;
+  padding: 30px 0 40px; }
+  .zc-wrap .zc-1 {
+    position: absolute;
+    top: 27px;
+    left: 50%;
+    z-index: 120;
+    width: 1200px;
+    height: 500px;
+    margin-left: -600px;
+    background: url(../img/zc-1.png) no-repeat;
+    _background: url(../img/zc-6.png) no-repeat;
+    opacity: .2;
+    filter: alpha(opacity=20); }
+  .zc-wrap .zc-2 {
+    position: absolute;
+    top: 27px;
+    left: 50%;
+    z-index: 120;
+    width: 1200px;
+    height: 500px;
+    margin-left: -600px;
+    background: url(../img/zc-2.png) no-repeat;
+    opacity: .05;
+    filter: alpha(opacity=5); }
+  .zc-wrap .zc-3 {
+    position: absolute;
+    top: 27px;
+    left: 50%;
+    z-index: 120;
+    width: 1200px;
+    height: 500px;
+    margin-left: -600px;
+    background: url(../img/zc-3.png) no-repeat;
+    opacity: .05;
+    filter: alpha(opacity=5); }
+  .zc-wrap .zc-4 {
+    position: absolute;
+    top: 27px;
+    left: 50%;
+    z-index: 120;
+    width: 1200px;
+    height: 500px;
+    margin-left: -600px;
+    background: url(../img/zc-4.png) no-repeat;
+    opacity: .05;
+    filter: alpha(opacity=5); }
+  .zc-wrap .zc-5 {
+    position: absolute;
+    top: 27px;
+    left: 50%;
+    z-index: 120;
+    width: 1200px;
+    height: 500px;
+    margin-left: -600px;
+    background: url(../img/zc-5.png) no-repeat;
+    opacity: .05;
+    filter: alpha(opacity=5); }
+  .zc-wrap .zc-z {
+    position: relative;
+    z-index: 150;
+    width: 330px;
+    margin: 0 auto; }
+    .zc-wrap .zc-z .zc-tit {
+      text-align: center;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 50px;
+      color: #333; }
+    .zc-wrap .zc-z .zc-form ul li {
+      position: relative;
+      min-height: 52px;
+      _height: 52px;
+      margin-top: 10px;
+      margin-right: -200px; }
+      .zc-wrap .zc-z .zc-form ul li .zc-yhm {
+        position: relative;
+        z-index: 2;
+        width: 328px;
+        height: 50px;
+        border: 1px solid #dedede;
+        border-radius: 3px; }
+        .zc-wrap .zc-z .zc-form ul li .zc-yhm .yhm-txt {
+          position: relative;
+          z-index: 2;
+          width: 288px;
+          height: 20px;
+          margin-top: 15px;
+          padding: 0 20px;
+          background: none;
+          border: none;
+          outline: none;
+          font-size: 14px;
+          line-height: 20px;
+          color: #666; }
+        .zc-wrap .zc-z .zc-form ul li .zc-yhm .yhm-sp {
+          position: absolute;
+          left: 20px;
+          top: 0;
+          display: inline-block;
+          height: 50px;
+          font-size: 14px;
+          line-height: 50px;
+          color: #666; }
+    .zc-wrap .zc-z li .zc-sjh {
+      position: relative;
+      z-index: 2;
+      width: 328px;
+      height: 50px;
+      border: 1px solid #dedede;
+      border-radius: 3px; }
+      .zc-wrap .zc-z li .zc-sjh .sjh-txt {
+        position: relative;
+        z-index: 2;
+        width: 288px;
+        height: 20px;
+        margin-top: 15px;
+        padding: 0 20px;
+        background: none;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        line-height: 20px;
+        color: #666; }
+      .zc-wrap .zc-z li .zc-sjh .sjh-sp {
+        position: absolute;
+        left: 20px;
+        top: 0;
+        display: inline-block;
+        height: 50px;
+        font-size: 14px;
+        line-height: 50px;
+        color: #666; }
+    .zc-wrap .zc-z li .zc-dx {
+      width: 192px;
+      position: relative;
+      z-index: 2;
+      height: 50px;
+      border: 1px solid #dedede;
+      border-radius: 3px;
+      float: left; }
+      .zc-wrap .zc-z li .zc-dx .dx-txt {
+        width: 152px;
+        position: relative;
+        z-index: 2;
+        height: 20px;
+        margin-top: 15px;
+        padding: 0 20px;
+        background: none;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        line-height: 20px;
+        color: #666; }
+      .zc-wrap .zc-z li .zc-dx .dx-sp {
+        position: absolute;
+        left: 20px;
+        top: 0;
+        display: inline-block;
+        height: 50px;
+        font-size: 14px;
+        line-height: 50px;
+        color: #666; }
+    .zc-wrap .zc-z li .dx-a1 {
+      position: relative;
+      z-index: 2;
+      width: 126px;
+      height: 50px;
+      margin-left: 10px;
+      text-align: center;
+      background-color: #57565f;
+      line-height: 52px;
+      color: #fff;
+      cursor: default;
+      border-radius: 2px;
+      font-size: 14px;
+      float: left; }
+    .zc-wrap .zc-z li .zc-mm {
+      position: relative;
+      z-index: 2;
+      width: 328px;
+      height: 50px;
+      border: 1px solid #dedede;
+      border-radius: 3px; }
+      .zc-wrap .zc-z li .zc-mm .mm-pas {
+        width: 268px;
+        padding: 0 20px 0 20px;
+        position: relative;
+        z-index: 2;
+        height: 20px;
+        margin-top: 15px;
+        background: none;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        line-height: 20px;
+        color: #666; }
+      .zc-wrap .zc-z li .zc-mm .mm-sp {
+        position: absolute;
+        left: 20px;
+        top: 0;
+        display: inline-block;
+        height: 50px;
+        font-size: 14px;
+        line-height: 50px;
+        color: #666; }
+    .zc-wrap .zc-z li .zc-qm {
+      position: relative;
+      z-index: 2;
+      width: 328px;
+      height: 50px;
+      border: 1px solid #dedede;
+      border-radius: 3px; }
+      .zc-wrap .zc-z li .zc-qm .qm-pas {
+        position: relative;
+        z-index: 2;
+        width: 288px;
+        height: 20px;
+        margin-top: 15px;
+        padding: 0 20px;
+        background: none;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        line-height: 20px;
+        color: #666; }
+      .zc-wrap .zc-z li .zc-qm .qm-sp {
+        position: absolute;
+        left: 20px;
+        top: 0;
+        display: inline-block;
+        height: 50px;
+        font-size: 14px;
+        line-height: 50px;
+        color: #666; }
+    .zc-wrap .zc-z li .zc-xy {
+      height: 35px;
+      font-size: 12px;
+      line-height: 35px;
+      color: #666;
+      text-indent: 1em; }
+      .zc-wrap .zc-z li .zc-xy .xy-a1 {
+        color: #06c;
+        text-decoration: none;
+        font-size: 12px; }
+    .zc-wrap .zc-z li .xy-a2 {
+      display: block;
+      width: 330px;
+      height: 52px;
+      margin-top: 6px;
+      background-color: #ff3c3c;
+      font-size: 16px;
+      line-height: 52px;
+      color: #fff;
+      text-align: center;
+      border-radius: 2px; }
+    .zc-wrap .zc-z .xy-a2:hover {
+      background: #CC0000; }
+
+.dibu {
+  width: 980px;
+  margin: 20px auto 0;
+  text-align: center; }
+  .dibu a {
+    margin: 0 8px;
+    color: #333;
+    font-size: 12px; }
+  .dibu p {
+    margin-top: 10px;
+    color: #333;
+    font-size: 12px; }
+
+/*# sourceMappingURL=zc.css.map */

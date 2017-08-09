@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>京东导航</title>
+		<script src="jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body,
+			ul,
+			li,dl,dt,dd {
+				padding: 0;
+				margin: 0;
+				font-size: 14px;
+				font-family: "microsoft yahei";
+			}
+			
+			li {
+				list-style: none;
+			}
+			
+			em {
+				font-style: normal;
+			}
+			
+			a {
+				color: #333;
+				text-decoration: none;
+			}
+			
+			a:hover {
+				color: #C81623;
+			}
+			.clearfix:after{
+				display: block;
+				content: "";
+				overflow: hidden;
+				clear: both;
+			}
+			img{
+				display: block;
+				border: none;
+			}
+			.mt20{
+				margin-top:20px;
+			}
+			#partNav {
+				position: relative;
+				width: 190px;
+				height: 352px;
+				padding: 12px 0;
+				background: #6e6568;
+				color: #fff;
+			}
+			
+			#partNav li {
+				padding-left: 12px;
+				height: 32px;
+				line-height: 32px;
+				font-size: 0;
+			}
+			
+			#partNav li:hover {
+				background: #999395;
+			}
+			
+			#partNav span {
+				margin: 0 4px;
+				font-size: 14px;
+			}
+			
+			#partNav li a {
+				color: #fff;
+				font-size: 14px;
+			}
+			
+			#partNav li a:hover {
+				color: #C81623;
+			}
+			
+			#partNav .navCon {
+				display: none;
+				position: absolute;
+				left: 190px;
+				top: 0;
+				width: 998px;
+				min-height: 374px;
+				margin-left: -1px;
+				border: 1px solid #f7f7f7;
+				background-color: #f7f7f7;
+				box-shadow: 2px 0 5px rgba(0, 0, 0, .3);
+			}
+			#partNav .navList{
+				padding: 20px 15px 20px 20px;
+			}
+			#partNav .part1 {
+				float: left;
+				width: 780px;
+			}
+			#partNav .part2 {
+				float: right;
+				width: 170px;
+			}
+			#partNav .channel a{
+				float: left;
+				margin-right: 10px;
+				padding: 2px 8px;
+				background: #6e6568;
+				color: #fff;
+			}
+			#partNav .detail{
+				margin: 20px 0;
+			}
+			#partNav .detail_item{
+				margin-bottom: 15px;
+			}
+			#partNav .detail dt{
+				float: left;
+				width: 70px;
+				text-align: right;
+			}
+			#partNav .detail dt a{
+				display: block;
+				padding: 2px 0;
+				color: #545454;
+				font-weight: bold;
+			}
+			#partNav .detail dt a:hover,#partNav .detail dd a:hover{
+				color:#C81623;
+			}
+			#partNav .detail dd{
+				padding-left: 70px;
+			}
+			#partNav .detail dd a{
+				display: inline-block;
+				padding: 2px 0;
+				margin: 0 5px;
+				color: #787878;
+			}
+			#partNav .detail dd a:before{
+				content: "|";
+				margin-right: 12px;
+				color: #999;
+			}
+			
+			#partNav .part2 a{
+				display: block;
+				float: left;
+				margin: 0 2px 2px 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="partNav">
+			<ul>
+				<script id="nav" type="text/html">
+					{{each navList as value}}
+					<li>
+						{{each value as item i}}
+						<a href="{{item.link}}">{{item.title}}</a>
+						{{if i != value.length-1}}
+						<span class="dl">/</span>
+						{{/if}}
+						
+						{{/each}}
+					</li>	
+					{{/each}}
+				</script>
+			</ul>
+				<!--<li>
+					<a href="">家用电器</a>
+				</li>
+				<li>
+					<a href="">手机</a><span class="dl">/</span>
+					<a href="">运营商</a><span class="dl">/</span>
+					<a href="">数码</a>
+				</li>
+				<li>
+					<a href="">手机</a><span class="dl">/</span>
+					<a href="">运营商</a><span class="dl">/</span>
+					<a href="">数码</a>
+				</li>
+				<li>
+					<a href="">手机</a><span class="dl">/</span>
+					<a href="">运营商</a><span class="dl">/</span>
+					<a href="">数码</a>
+				</li>
+				<li>
+					<a href="">手机</a><span class="dl">/</span>
+					<a href="">运营商</a><span class="dl">/</span>
+					<a href="">数码</a>
+				</li>
+				<li>
+					<a href="">手机</a><span class="dl">/</span>
+					<a href="">运营商</a><span class="dl">/</span>
+					<a href="">数码</a>
+				</li>
+				<li>
+					<a href="">手机</a><span class="dl">/</span>
+					<a href="">运营商</a><span class="dl">/</span>
+					<a href="">数码</a>
+				</li>
+				<li>
+					<a href="">手机</a><span class="dl">/</span>
+					<a href="">运营商</a><span class="dl">/</span>
+					<a href="">数码</a>
+				</li>
+				<li>
+					<a href="">手机</a><span class="dl">/</span>
+					<a href="">运营商</a><span class="dl">/</span>
+					<a href="">数码</a>
+				</li>
+				<li>
+					<a href="">手机</a><span class="dl">/</span>
+					<a href="">运营商</a><span class="dl">/</span>
+					<a href="">数码</a>
+				</li>
+				<li>
+					<a href="">手机</a><span class="dl">/</span>
+					<a href="">运营商</a><span class="dl">/</span>
+					<a href="">数码</a>
+				</li>-->
+			
+			<div class="navCon">
+				<script id="navCon" type="text/html">
+					<div class="navList clearfix">
+					<div class="part1">
+						<div class="channel clearfix">
+							{{each recm as value}}
+							<a href="{{value.link}}" target="_blank">{{value.tit}}<span>&gt;</span></a>
+							{{/each}}
+						</div>
+						<div class="detail">
+							{{each subNavLists as value1}}
+							<dl class="detail_item clearfix">
+								<dt><a href="" target="_blank">{{value1.subNavTit}}<span>&gt;</span></a></dt>
+								<dd>
+									{{each value1.subNavList as value11}}
+										<a href="" target="_blank">{{value11}}</a>
+									{{/each}}
+								</dd>
+							</dl>
+							{{/each}}
+				</script>
+				<!--<div class="navList clearfix">
+					<div class="part1">
+						<div class="channel clearfix">
+							<a href="" target="_blank">家电馆<span>&gt;</span></a>
+							<a href="" target="_blank">家电馆<span>&gt;</span></a>
+							<a href="" target="_blank">家电馆<span>&gt;</span></a>
+							<a href="" target="_blank">家电馆<span>&gt;</span></a>
+							<a href="" target="_blank">家电馆<span>&gt;</span></a>
+							<a href="" target="_blank">家电馆<span>&gt;</span></a>
+							<a href="" target="_blank">家电馆<span>&gt;</span></a>
+						</div>
+						<div class="detail">
+							<dl class="detail_item clearfix">
+								<dt><a href="" target="_blank">电视<span>&gt;</span></a></dt>
+								<dd>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+								</dd>
+							</dl>
+							<dl class="detail_item clearfix">
+								<dt><a href="" target="_blank">电视<span>&gt;</span></a></dt>
+								<dd>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+								</dd>
+							</dl>
+							<dl class="detail_item clearfix">
+								<dt><a href="" target="_blank">电视<span>&gt;</span></a></dt>
+								<dd>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+								</dd>
+							</dl>
+							<dl class="detail_item clearfix">
+								<dt><a href="" target="_blank">电视<span>&gt;</span></a></dt>
+								<dd>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+								</dd>
+							</dl>
+							<dl class="detail_item clearfix">
+								<dt><a href="" target="_blank">电视<span>&gt;</span></a></dt>
+								<dd>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+								</dd>
+							</dl>
+							<dl class="detail_item clearfix">
+								<dt><a href="" target="_blank">电视<span>&gt;</span></a></dt>
+								<dd>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+									<a href="" target="_blank">曲面电视</a>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="part2">
+						<div class="brand clearfix">
+							<a href="" target="_blank"><img width="83" height="35" src="//img10.360buyimg.com/vclist/jfs/t2176/358/849877519/2001/3cb2806f/562f4971Na5379aba.jpg!q90" data-webp="no"></a>
+							<a href="" target="_blank"><img width="83" height="35" src="//img10.360buyimg.com/vclist/jfs/t2176/358/849877519/2001/3cb2806f/562f4971Na5379aba.jpg!q90" data-webp="no"></a>
+							<a href="" target="_blank"><img width="83" height="35" src="//img10.360buyimg.com/vclist/jfs/t2176/358/849877519/2001/3cb2806f/562f4971Na5379aba.jpg!q90" data-webp="no"></a>
+							<a href="" target="_blank"><img width="83" height="35" src="//img10.360buyimg.com/vclist/jfs/t2176/358/849877519/2001/3cb2806f/562f4971Na5379aba.jpg!q90" data-webp="no"></a>
+							<a href="" target="_blank"><img width="83" height="35" src="//img10.360buyimg.com/vclist/jfs/t2176/358/849877519/2001/3cb2806f/562f4971Na5379aba.jpg!q90" data-webp="no"></a>
+							<a href="" target="_blank"><img width="83" height="35" src="//img10.360buyimg.com/vclist/jfs/t2176/358/849877519/2001/3cb2806f/562f4971Na5379aba.jpg!q90" data-webp="no"></a>
+							<a href="" target="_blank"><img width="83" height="35" src="//img10.360buyimg.com/vclist/jfs/t2176/358/849877519/2001/3cb2806f/562f4971Na5379aba.jpg!q90" data-webp="no"></a>
+							<a href="" target="_blank"><img width="83" height="35" src="//img10.360buyimg.com/vclist/jfs/t2176/358/849877519/2001/3cb2806f/562f4971Na5379aba.jpg!q90" data-webp="no"></a>
+						</div>
+						<div class="mt20">
+							<a href="" target="_blank"><img width="168" height="134" src="//img13.360buyimg.com/vclist/jfs/t3304/170/8146021596/7458/bd08b20e/58c35aecN96127184.jpg!q90" data-webp="no"></a>
+							<a href="" target="_blank"><img width="168" height="134" src="//img13.360buyimg.com/vclist/jfs/t3304/170/8146021596/7458/bd08b20e/58c35aecN96127184.jpg!q90" data-webp="no"></a>
+							
+						</div>
+					</div>
+				</div>-->
+
+			</div>
+		</div>
+			<script src="template.js" type="text/javascript" charset="utf-8"></script>
+			<script src="nav.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

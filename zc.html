@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/zc.css"/>
+	</head>
+	<body>
+		<div class="header clearfix">
+			<div class="wrap">
+				<a href="#" class="logo">
+					<img src="img/dllogo.jpg">
+				</a>
+				<div class="header-r">
+					<span>
+						您好，欢迎光临1号店!
+						<a href="dl.html" class="a2">请登录</a>
+					</span>
+					<div class="help-wrap">
+						<a href="#" class="a1">
+							<s class="help-t"></s>
+							帮助中心
+						</a>
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="zc-wrap">
+			<div class="zc-1"></div>
+			<div class="zc-2"></div>
+			<div class="zc-3"></div>
+			<div class="zc-4"></div>
+			<div class="zc-5"></div>
+			<div class="zc-z">
+				<h4 class="zc-tit">1号店注册</h4>
+				<div class="zc-form">
+					<ul class="clearfix">
+						<li class="zc-li1">
+							<div class="zc-yhm">
+								<input type="text" class="yhm-txt" id="txt-1">
+								<span class="yhm-sp">用户名</span>
+							</div>
+						</li>
+						<li class="zc-li2">
+							<div class="zc-sjh">
+								<input type="text" class="sjh-txt" id="txt-2">
+								<span class="sjh-sp">手机号</span>
+							</div>
+						</li>
+						<li class="zc-li3">
+							<div class="zc-dx">
+								<input type="text" class="dx-txt" id="txt-3">
+								<span class="dx-sp">短信验证码</span>
+							</div>
+							<a href="#" class="dx-a1">获取验证码</a>
+						</li>
+						<li class="zc-li4">
+							<div class="zc-mm">
+								<input type="password" class="mm-pas" id="pas-1">
+								<span class="mm-sp">设置密码</span>
+							</div>
+						</li>
+						<li class="zc-li5">
+							<div class="zc-qm">
+								<input type="password" class="qm-pas" id="pas-2">
+								<span class="qm-sp">确认密码</span>
+							</div>
+						</li>
+						<li class="zc-li6">
+							<div class="zc-xy">
+								点击注册，表示您同意1号店
+								<a class="xy-a1"><<服务协议>></a>
+							</div>
+							<a href="dl.html" class="xy-a2" id="a2">同意协议并注册</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="dibu">
+			<a href="#">沪ICP备16050468号</a>
+			|
+			<a href="#">沪B2-20170039</a>
+			|
+			<a href="#">营业执照</a>
+			<p>Copyright © 1号店网上超市 2007-2017，All Rights Reserved</p>
+		</div>
+		
+		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+			  $(".yhm-txt").click(function(){
+			  	$(".yhm-sp").animate({left:'-50px'});
+			  });
+			  $(".sjh-txt").click(function(){
+			  	$(".sjh-sp").animate({left:'-50px'});
+			  });
+			  $(".dx-txt").click(function(){
+			  	$(".dx-sp").animate({left:'-80px'});
+			  });
+			  $(".mm-pas").click(function(){
+			  	$(".mm-sp").animate({left:'-70px'});
+			  });
+			  $(".qm-pas").click(function(){
+			  	$(".qm-sp").animate({left:'-70px'});
+			  });
+			});
+			
+			var oDj=document.getElementById("a2");
+			var oTxt1=document.getElementById("txt-1");
+			var reg1=/^[0-9a-zA-Z\u4e00-\u9fa5_]{3,16}$/;//长度：3-16位可以为汉字、数字、字母（大小写）、下划线
+			oTxt1.onchange=function(){
+				if(reg1.test(oTxt1.value)){
+					//console.log(oTxt.value);
+					alert("用户名正确");
+				}else{
+					alert("用户名错误");
+				}
+			}
+			var oTxt2=document.getElementById("txt-2");
+			var reg2=/^\d{11}$/
+		    oTxt2.onchange=function(){
+				if(reg2.test(oTxt2.value)){
+					alert("号码格式正确");
+				}else{
+					alert("号码格式错误");
+				}
+			}
+		    var oTxt3=document.getElementById("txt-3");
+		    var reg3=/^\w{3,5}$/;//大小写字母数字下划线至少3位，不超过5位
+		    oTxt3.onchange=function(){
+		    	if(reg3.test(oTxt3.value)){
+					alert("验证码正确");
+				}else{
+					alert("验证码错误");
+				}
+		    }
+		    
+		    
+			
+			/*var pwd1=document.getElementById("pas-1");
+			var pwd2 =document.getElementById("pas-2");
+			var reg4=/^\w{7,9}$/;//大小写字母数字下划线至少7位，不超过9位
+			if(reg4.test(pwd1.value)){
+				alert("密码格式正确");
+			}else {
+				alert("密码格式错误");
+			}*/
+			
+			function  check(){
+				var pwd1 = document.getElementById("pas-1").value;
+				var pwd2 = document.getElementById("pas-2").value;
+	  			if(pwd2!=pwd1){
+	       			alert("两次输入的密码不一致,请检查！");
+	      			 return false;
+	 		 	}
+	  			return true;
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,300 @@
+@charset "utf-8";
+//sass 静默注视
+body,ul,li,dl,dt,dd{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.clearfix:after{
+        display: block;
+        content: ".";
+        height: 0;
+        visibility: hidden;
+        clear: both;
+        font-size: 0;
+        line-height: 0;
+}
+.header{
+        padding: 16px;
+        background: #FFF;
+        border: 1px solid #e1e1e1;
+        .wrap{
+            width: 1200px;
+            .logo{
+                display: block;
+                float: left;
+                width: 54px;
+                height: 48px;
+                img{
+                    border: 0 none;
+                    vertical-align: top;
+                }
+            
+            }
+            .header-r{
+                float: right;
+                line-height: 18px;
+                font-family: "SimSun";
+                color: #999;
+                width:300px;
+                .help-wrap{
+                        background: #FFF;
+                        .a1{
+                            padding-right: 18px;
+                            background: url(../img/dl3.png) no-repeat right -30px;
+                            color: #333;
+                            font-size: 12px;
+                            float:right;
+                            .help-t{
+                                    width: 16px;
+                                    height: 18px;
+                                    display: inline-block;
+                                    margin-right: 6px;
+                                    background: url(../img/dl3.png) no-repeat -344px 0;
+                                    vertical-align: middle;
+                            }
+                            
+                        }
+                }
+                span{
+                    float: left;
+                    font-size: 12px;
+                    .a2{
+                        color: #06c;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+}
+.login-wrap{
+    padding: 26px 0 0;
+    background: url(../img/dl4.png) repeat-x;
+    .wrap{
+        width: 980px;
+        margin: 0 auto;
+        .wrap-l{
+            margin-top: 45px;
+            width: 510px;
+            height: 315px;
+            float: left;
+            .a3{
+                text-decoration: none;
+                color: #333;
+                .img1{
+                    width: 510px;
+                    height: 315px;
+                }
+            }
+        }
+        .wrap-r{
+                position: relative;
+                _display: inline;
+                float: right;
+                width: 330px;
+                padding: 45px 35px 0 35px;
+                background-color: #fff;
+                .p1{
+                    position: absolute;
+                    top: 9px;
+                    left: 35px;
+                    width: 282px;
+                    height: 30px;
+                    overflow: hidden;
+                    padding: 0 10px 0 36px;
+                    border: 1px solid #e5debc;
+                    border-radius: 2px;
+                    background: #fff7d1 url(../img/dl3.png) no-repeat -324px -150px;
+                    line-height: 30px;
+                    color: #999;
+                }
+                .clearfix h3{
+                        float: left;
+                        font-size: 14px;
+                        color: #666;
+                        font-weight: bold;
+                        line-height: 30px;
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+                }
+                .clearfix .a4{
+                        float: right;
+                        line-height: 30px;
+                        color: #06c;
+                        font-size: 12px;
+
+                }
+                .login_form{
+                        position: relative;
+                        padding: 0 0 18px;
+                        .form-1{
+                            width: 330px;
+                            margin: 0 auto;
+                            .form-1-2{
+                                z-index: 101;
+                                border: 1px solid #AAA;
+                                position: relative;
+                                z-index: 100;
+                                height: 24px;
+                                margin-bottom: 10px;
+                                padding: 14px 18px;
+                                border: 1px solid #dedede;
+                                background: #FFF;
+                                line-height: 24px;
+                                .form-1-3{
+                                    background: url(../img/dl3.png) no-repeat -50px 4px;
+                                    display: inline-block;
+                                    width: 42px;
+                                    vertical-align: middle;
+                                    color: #666;
+                                }
+                                .txt{
+                                    width: 230px;
+                                    height: 24px;
+                                    padding-left: 3px;
+                                    border: 0 none;
+                                    line-height: 24px;
+                                    vertical-align: middle;
+                                    font-family: "Microsoft YaHei";
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                        .form-2{
+                            position: relative;
+                            z-index: 100;
+                            height: 24px;
+                            margin-bottom: 10px;
+                            padding: 14px 18px;
+                            border: 1px solid #dedede;
+                            background: #FFF;
+                            line-height: 24px;
+                            .form-2-2{
+                                    background: url(../img/dl3.png) no-repeat -150px 4px;
+                                    display: inline-block;
+                                    width: 42px;
+                                    vertical-align: middle;
+                                    color: #666;
+                            }
+                            .pas{
+                                color:#ccc;
+                                width: 230px;
+                                height: 24px;
+                                padding-left: 3px;
+                                border: 0 none;
+                                line-height: 24px;
+                                vertical-align: middle;
+                                font-family: "Microsoft YaHei";
+                                font-size: 14px;
+                            }
+                        }
+                        .form-3{
+                                position: relative;
+                                margin: 10px 0;
+                                line-height: 24px;
+                                min-height: 24px;
+                                _height: 24px;
+                                .form-3-p1{
+                                    margin: 0;
+                                    padding: 0;
+                                    list-style: none;
+                                    a{
+                                        float: left;
+                                        padding-left: 18px;
+                                        background: url(../img/dl3.png) no-repeat -347px -265px;
+                                        color: #999;
+                                    }
+                                }
+                                .form-3-p2{
+                                    
+                                    margin: 0;
+                                    padding: 0;
+                                    list-style: none;
+                                    a{
+                                        position: absolute;
+                                        right: 0;
+                                        top: 0;
+                                        color: #999;
+                                    }
+                                }
+                                
+                        }
+                        .btn{
+                            width: 330px;
+                            height: 52px;
+                            border: 0 none;
+                            border-radius: 3px;
+                            background: #ff3c3c;
+                            font-size: 16px;
+                            color: #FFF;
+                            cursor: pointer;
+                            text-shadow: 1px 1px 1px #ff7373;
+                            font-family: "Microsoft YaHei";
+                            line-height: 52px;
+                        }
+                        .form-4{
+                            position: relative;
+                            z-index: 10;
+                            p{
+                                padding: 15px 0;
+                                color: #666;
+                            }
+                            div .ul1{
+                                float: left;
+                                width: 220px;
+                                li{
+                                    float: left;
+                                    margin: 0 20px 0 0;
+                                    _display: inline;
+                                    a{
+                                        display: inline-block;
+                                        width: 32px;
+                                        height: 35px;
+                                        font-size: 32px;
+                                        line-height: 35px;
+                                    }
+                                }
+                            }
+                            .a5{
+                                float: right;
+                                display: block;
+                                line-height: 34px;
+                                color: #999;
+                                font-size: 12px;
+                                i{
+                                    display: inline-block;
+                                    width: 20px;
+                                    height: 26px;
+                                    margin-top: 4px;
+                                    margin-left: 5px;
+                                    background: url(../img/dl3.png) no-repeat -200px 3px;
+                                    vertical-align: middle;
+                                }
+                            }
+                        }
+                                
+                }
+        }
+    }
+}
+.dibu{
+    width: 980px;
+    margin: 20px auto 0;
+    text-align: center;
+    a{
+        margin: 0 8px;
+        color: #333;
+        font-size: 12px;
+    }
+    p{
+        margin-top: 10px;
+        color: #333;
+        font-size: 12px;
+    }
+}
