@@ -134,7 +134,7 @@
 					<i>&gt;</i>
 				</a>
 				<div class="rd2">
-					<p class="rd2p1">购物车总计<em>1</em>商品</p>
+					<p class="rd2p1">购物车总计<em class="em1">1</em>商品</p>
 					<p class="rd2p2">￥<em>269</em></p>
 				</div>
 			</div>
@@ -267,6 +267,17 @@
 				    $(".gwn").hide();
 				});
 			});
+			
+			var cartStr = $.cookie("numId");
+				 if(cartStr== undefined){
+				 	alert("没有商品,请选购商品")
+				 }else{
+				 	 var cartObj = JSON.parse(cartStr) ;
+				 	 
+				 }
+				 
+				console.log(cartObj[0])
+				$(".em1").html(cartObj[0])
 		</script>
 	</body>
 </html>
