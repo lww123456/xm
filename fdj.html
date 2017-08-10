@@ -6,6 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="css/public.css"/>
 		<link rel="stylesheet" type="text/css" href="css/fdj.css"/>
 		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<section id="top">
@@ -238,7 +239,7 @@
 					</div>
 					<div class="fdc-5">
 						<div class="fdc-5l">
-							<a href="gwc.html"><span>加入购物车</span></a>
+							<a href="javascript:;"><span>加入购物车</span></a>
 							
 						</div>
 						
@@ -456,12 +457,27 @@
 			$("#dw img").attr("src",$(this).attr("src"));
 		})	
 			
-		/*$("#gw a").
-		${function(){
-			$("#gw a").click(function(){
-				
-			})
-		}}*/
+		function addToCart(num){
+	        //获取购物车cookie信息
+	        var cartStr = $.cookie("numId");
+	   
+	        var cartObj = cartStr ? JSON.parse(cartStr) : {};
+	   
+	        cartObj[0] =cartObj[0] ? cartObj[0]=num : num;    
+			console.log(cartObj);
+	        //存cookie
+	        var cart = JSON.stringify(cartObj);
+	        console.log(cart);
+	        $.cookie("numId",cart,{"expires":7,"path":"/"});
+	        
+	    }
+     $(".fdc-5l").click(function(){
+			var num = $(".shop").html();
+			++num;
+			$(".shop").html(num);
+  			num = parseFloat(num);
+  			addToCart(num);
+		})
 
 		</script>
 	</body>

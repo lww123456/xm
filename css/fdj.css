@@ -141,6 +141,7 @@ header .gw .gwn .gwn1 span{display: inline-block;width: 117px;height: 77px;margi
 #fd .fdc .fdcc .fdc-4 dl dd p a{color:#06c;}
 
 #fd .fdc .fdcc .fdc-5{margin-bottom: 30px;padding-left: 70px;padding-top: 15px;}
+#fd .fdc .fdcc .fdc-5 .fdc-5l{width:132px;}
 #fd .fdc .fdcc .fdc-5 .fdc-5l a{display: block;background-color: #e60021;width: 130px;height: 20px;color: #666;line-height: 20px;text-align: center;border: 1px solid #d7d7d7;overflow: hidden;padding: 9px 0 9px;font-size: 16px;}
 #fd .fdc .fdcc .fdc-5 .fdc-5l a span{font-size: 18px;color: #fff;}
 #fd .fdc .fdcc .fdc-5 .fdc-5l a:hover{opacity: .7;}
